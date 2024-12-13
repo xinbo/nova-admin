@@ -11,7 +11,7 @@ export function fetchUserPage() {
 }
 // 获取所有角色列表
 export function fetchRoleList() {
-  return request.Get<Service.ResponseResult<Entity.Role[]>>('/role/list')
+  return request.Get<Service.ResponseResult<Entity.Role[]>>('/getRoleList')
 }
 
 /**
@@ -22,5 +22,5 @@ export function fetchRoleList() {
  */
 export function fetchDictList(code?: string) {
   const params = { code }
-  return request.Get<Service.ResponseResult<Entity.Dict[]>>('/dict/list', { params })
+  return request.Get<Service.ResponseResult<Entity.Dict[]>>('getDictLaist', { params })
 }
